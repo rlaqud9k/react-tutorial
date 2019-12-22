@@ -21,8 +21,10 @@ class App extends Component {
   render() {
    return (
      <div>
-      <MyName name = {this.state.MyName.name}/>
-      <Contents name = {this.state.Contents} />
+      <MyName  name = {this.state.MyName.name}/>
+      <Contents onChangePage={function(dename){
+        console.log(this);
+      }.bind(this)} name = {this.state.Contents} dename = {'Contents'}/>
       <Counter/>
      </div>
    );
